@@ -9,7 +9,7 @@ const userSchema = joi_1.default.object({
     first_name: joi_1.default.string()
         .max(255)
         .required()
-        .pattern(/^[a-zA-Z\s-']+$/)
+        .pattern(/^[a-zA-Z\s]+[^~¨]+$/)
         .messages({
         "string.pattern.base": "⚠ Invalid first name.",
         "any.required": "⚠ First name is required.",
@@ -18,7 +18,7 @@ const userSchema = joi_1.default.object({
     last_name: joi_1.default.string()
         .max(255)
         .required()
-        .pattern(/^[a-zA-Z\s-']+$/)
+        .pattern(/^[a-zA-Z\s]+[^~¨]+$/)
         .messages({
         "string.pattern.base": "⚠ Invalid last name.",
         "any.required": "⚠ Last name is required.",
